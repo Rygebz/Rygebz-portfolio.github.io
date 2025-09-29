@@ -1,0 +1,92 @@
+/* Navbar main container */
+.nav {
+  position: relative; /* navbar will now scroll naturally */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  width: 50%;
+  margin: 0 25%;
+  padding: 10px 0;
+  position: relative;
+  
+}
+
+/* Container for logo + links */
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo on the left */
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Links centered */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+/* Links styling */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: lightgray;
+}
+
+/* Hamburger menu (hidden on large screens) */
+.hamburger {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile menu (hidden by default) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.mobile-menu a {
+  color: white;          /* make text white */
+  text-decoration: none;   /* remove underline */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .nav {
+    width: 85%;
+    margin: 2% 5%;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: none;  /* hide links on small screens */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  .mobile-menu {
+    display: flex;  /* show menu when hamburger clicked */
+  }
+}

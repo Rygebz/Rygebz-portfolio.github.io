@@ -1,0 +1,113 @@
+.message {
+  padding: 1rem 1.25rem;
+  margin: 5vh auto 0;
+  text-align: center;
+  max-width: min(720px, 90%);
+  border-radius: var(--radius-lg);
+  font-size: clamp(18px, 2.2vw, 26px);
+  background-color: var(--bg-message);
+  color: var(--text-primary);
+  line-height: 1.2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+/* Container for text + image */
+.article-container {
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
+  gap: 140px;                /* spacing between text and image */
+  height: 20vh;
+}
+
+/* Text section */
+.text-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.desc {
+  font-size: 25px;
+  margin-top: 8px;
+}
+
+/* Profile image */
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.header-about {
+  text-decoration: underline;
+}
+
+.about {
+  width: 30vw;
+  margin: 0 auto;      
+  text-align: justify;
+  margin-top: 5vh;
+}
+
+.header-bio {
+  text-decoration: underline;
+}
+
+.bio {
+  width: 30vw;
+  margin: 0 auto;      
+  text-align: justify;
+  margin-top: 5vh;
+}
+
+.header-interests {
+  text-decoration: underline;
+}
+
+.interests {
+  width: 30vw;
+  margin: 0 auto;      
+  text-align: justify;
+  margin-top: 5vh;
+}
+
+@media (max-width: 768px) { 
+
+  .message {
+    width: 80vw;           /* wider message box */
+    font-size: 20px;       /* smaller text */
+    height: auto;          /* allow height to adjust */
+    padding: 12px;         /* reduce padding */
+    margin-top: 3vh;       /* reduce top margin */
+  }
+
+  .article-container {
+    flex-direction: column; /* stack vertically on small screens */
+    gap: 20px;              /* reduce gap */
+    height: 25vh;           /* allow height to adjust */
+  }
+
+  .profile-picture {
+    width: 100px;           /* smaller image */
+    height: 100px;
+  }
+
+  .name {
+    font-size: 28px;        /* smaller text */
+  }
+
+  .desc {
+    font-size: 20px;        /* smaller text */
+  }
+
+  .about, .bio, .interests {
+    width: 80vw;            /* wider text sections */
+    margin-top: 3vh;        /* reduce top margin */
+  }
+}
